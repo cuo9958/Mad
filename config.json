@@ -1,0 +1,28 @@
+{
+    "html": [],
+    "js": [
+        {
+            "src": "src/js/*.js",
+            "dist": "dist/js"
+        }
+    ],
+    "ts": [
+        {
+            "src": "src/js/*.ts",
+            "dist": "dist/js"
+        }
+    ],
+    "less": [
+        {
+            "src": "src/css/*.less",
+            "dist": "dist/css"
+        }
+    ],
+    "img": [
+        {
+            "src": "src/images/*.{png,jpg,gif,ico}",
+            "dist": "dist/images"
+        }
+    ],
+    "copy": []
+}

@@ -1,0 +1,40 @@
+{
+  "name": "mad",
+  "version": "1.0.0",
+  "description": "mad frame",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuo9958/Mad.git"
+  },
+  "keywords": [
+    "mad",
+    "frame"
+  ],
+  "author": "zixiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuo9958/Mad/issues"
+  },
+  "homepage": "https://github.com/cuo9958/Mad#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^0.4.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-typescript": "^3.2.1",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "opn": "^5.1.0",
+    "shelljs": "^0.7.8",
+    "typescript": "^2.4.2"
+  }
+}
