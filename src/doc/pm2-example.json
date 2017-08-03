@@ -1,0 +1,14 @@
+{
+  "apps": {
+    "name": "server",
+    "cwd": "/flower-web",
+    "script": "./flower-server/bin/www",
+    "error_file": "./logs/error_file.log",
+    "out_file": "./logs/out_file.log",
+    "pid_file": "./logs/pid_file.log",
+    "env": {
+      "NODE_ENV": "pro",
+      "PORT": "3000"
+    }
+  }
+}
