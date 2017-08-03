@@ -22,9 +22,18 @@
 # 已添加的工具或者问题
 
 - js/flexible.js :移动端自适应插件。将屏幕格式化为统一的宽度。
-- css/button.less :按钮css类
-- css/icon.less :icon的css类
-- css/base.less ：初始化页面并添加简单的浮动、文本居中、flex等class
+- base.less ：初始化页面并添加简单的浮动、文本居中、flex等class
+- border.less :
+- button.less :按钮css类
+- flex.less :
+- form.less :
+- grid.less :
+- icon.less :icon的css类
+- pagination.less :
+- popup.less :
+- progress.less :
+- rounded.less :
+- table.less :
 - html/base.html :初始化页面的html框架。
 
 # 更新日志
