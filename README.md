@@ -17,3 +17,15 @@
 - gulp watch：监听文件改动
 - gulp help：简单的帮助，希望能够起到作用
 - npm install：下载node各种包
+
+# 已添加的工具或者问题
+
+- js/flexible.js :移动端自适应插件。将屏幕格式化为统一的宽度。
+- css/button.less :按钮css类
+- css/icon.less :icon的css类
+- css/base.less ：初始化页面并添加简单的浮动、文本居中、flex等class
+- html/base.html :初始化页面的html框架。
+
+# 更新日志
+
+- 初始化项目并添加几个基础类库
