@@ -11,3 +11,5 @@
 3.pm2 restart all:重启服务
 4.pm2 list :查看所有服务
 5.pm2 kill [name|id] :杀掉进程
+
+
