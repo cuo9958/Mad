@@ -1,5 +1,10 @@
 {
-    "html": [],
+    "html": [
+        {
+            "src":"src/html/*.html",
+            "dist":"dist/html"
+        }
+    ],
     "js": [
         {
             "src": "src/js/*.js",

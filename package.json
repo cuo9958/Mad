@@ -2,9 +2,9 @@
   "name": "mad",
   "version": "1.0.0",
   "description": "mad frame",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp help"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
