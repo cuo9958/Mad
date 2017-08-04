@@ -15,4 +15,12 @@ Array.prototype.contains = function (obj) {
         }
     }
     return false;
-} 
+}
+/**
+ * 从数组中找出第一个大于传入的数的值
+ */
+Array.prototype.startWith = function (num) {
+    let index = this.length - 1;
+    while (num < this[index]) index--;
+    return index;
+}
