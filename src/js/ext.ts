@@ -38,21 +38,16 @@ if (!window.Promise) {
             fn(this.resolve.bind(this), this.reject.bind(this));
         }
         resolve(res) {
-            console.log("success");
-            console.log(this)
             if (this.callbacks.length > 0) this.callbacks.shift()(res, this.resolve.bind(this), this.reject.bind(this));
         }
         reject(res) {
-            console.log("err")
             this.callbacks = [];
             if (this.failbacks.length > 0) this.failbacks.shift()(res, this.resolve.bind(this), this.reject.bind(this));
         }
         catch(fn) {
-            console.log("catch")
             this.failbacks.push(fn);
         }
         then(fn) {
-            console.log("then")
             this.callbacks.push(fn);
             return this;
         }
