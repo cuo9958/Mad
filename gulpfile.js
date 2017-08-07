@@ -62,7 +62,7 @@ let watchfn = (list, cb) => {
     list.forEach(function (item) {
         item && gulp.watch(item.src, function (event) {
             cb(event.path, item.dist, item.base);
-            isServer && server.notify(event);
+            isServer && connect.reload();
         });
     });
 }

@@ -24,3 +24,41 @@ Array.prototype.startWith = function (num) {
     while (num < this[index]) index--;
     return index;
 }
+
+/**
+ * 实现Promise的方法，如果浏览器不支持就使用这个代替
+ */
+
+if (!window.Promise) {
+    class Promise {
+        result: any;
+        callbacks = [];
+        failbacks = [];
+        constructor(fn) {
+            fn(this.resolve.bind(this), this.reject.bind(this));
+        }
+        resolve(res) {
+            console.log("success");
+            console.log(this)
+            if (this.callbacks.length > 0) this.callbacks.shift()(res, this.resolve.bind(this), this.reject.bind(this));
+        }
+        reject(res) {
+            console.log("err")
+            this.callbacks = [];
+            if (this.failbacks.length > 0) this.failbacks.shift()(res, this.resolve.bind(this), this.reject.bind(this));
+        }
+        catch(fn) {
+            console.log("catch")
+            this.failbacks.push(fn);
+        }
+        then(fn) {
+            console.log("then")
+            this.callbacks.push(fn);
+            return this;
+        }
+        always() {
+
+        }
+    }
+}
+

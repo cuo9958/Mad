@@ -2,7 +2,7 @@
     "html": [
         {
             "src":"src/html/*.html",
-            "dist":"dist/html"
+            "dist":"dist"
         }
     ],
     "js": [
