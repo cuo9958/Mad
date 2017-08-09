@@ -10,6 +10,12 @@
 6.vim /etc/... :打开对应的文件，不存在则创建
 7.ps -ef |grep name :查看进程并查询带name的进程
 8.source /etc/profile :使用新的环境变量
+9.ll ls :查看当前目录文件，-la 查看所有文件
+10.top :查看cpu、内存的情况
+11.man [ls]:查看命令的帮助
+12.diff dir1 dir2 :比较文件的不同
+13.cp -rp /home/d001　/home/Documents :复制目录，-r 遍历目录，-p 保留属性
+
 
 ### vim简单快捷键
 
