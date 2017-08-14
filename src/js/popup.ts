@@ -1,11 +1,16 @@
 /**
  * 轻量级移动端弹出层的脚本,配合popup.less使用
+ * 参数说明：
+ * debug 暂时未启用，默认false
+ * title 弹出层的标题，默认空，不显示
+ * content 弹出层显示的内容，默认空，类型[string|html]
+ * btns 下面的按钮文字。默认确定、取消2个按钮，如果需要多个可以依次添加多个
+ * success 默认确定按钮的事件，对应按钮的第一个，event的第一个如果有事件则不触发
+ * cancel  默认取消按钮的事件，对应按钮的第二个，event的第二个如果有事件则不触发
+ * event  按钮事件组，类型 [object]。对应方式：第一个按钮对应btn0事件，第二个按钮对应btn1事件。其他依次类推{btn+按钮的序号}
  */
 let html_bg = `<div class="popup_bg"></div>`;
-
-
 let extend = function (obj1, obj2) {
-
     for (var key in obj2) {
         if (obj2.hasOwnProperty(key)) {
             if (obj2[key]) obj1[key] = obj2[key];
@@ -96,7 +101,7 @@ let api = {
             cancel: cancel,
             btns: btns
         });
-    }
+    },
 }
 return api;
 export { api }
