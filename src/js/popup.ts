@@ -51,7 +51,7 @@ class popup {
         for (var i = 0; i < this.options.btns.length; i++) {
             this.btns += `<button class="btn popup_btn popup_btn${i}">${this.options.btns[i]}</button>`;
         }
-        if (this.btns) this.btns = `<div class="popup_bottom tab-content">${this.btns}</div>`;
+        if (this.btns) this.btns = `<div class="popup_bottom flex">${this.btns}</div>`;
         let html = `${html_bg}<div class="popup_box">${this.title}${this.content}${this.btns}</div>`;
         this.container.innerHTML = html;
         let obj = this;
