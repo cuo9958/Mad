@@ -56,4 +56,19 @@ if (!window.Promise) {
         }
     }
 }
-
+/**
+ * 扩展不支持Object.create
+ */
+if (!Object.create) {
+    Object.create = function (o) {
+        function F() { }
+        F.prototype = o;
+        return new F();
+    };
+}
+//继承方式
+//1.原型链继承，关键：Child.prototype = new Parent();
+//2.类式继承，关键：Parent.call(this,args);
+//3.原型继承，关键：object.create
+//4.寄生式继承，关键：var clone=new Object(original);
+//5.混合继承，关键call+prototype
