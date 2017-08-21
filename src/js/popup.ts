@@ -135,7 +135,3 @@ let api = {
 }
 // return api;
 // export { api }
-
-var a = api.alert(null, "弹出层", function () {
-    console.log(this);
-})
