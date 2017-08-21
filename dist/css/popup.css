@@ -1,0 +1,63 @@
+/*
+    移动端弹出层,配合popup.js使用
+    @import url("flex.less")
+*/
+.popup_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+}
+.popup_container .popup_bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup_container .popup_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%) translateZ(0);
+          transform: translate(-50%, -50%) translateZ(0);
+  background: #fff;
+  border-radius: 0.2133rem;
+  -webkit-box-shadow: 0.0133rem 0.0267rem 0.1333rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0.0133rem 0.0267rem 0.1333rem 0 rgba(0, 0, 0, 0.2);
+}
+.popup_container .popup_title {
+  text-align: center;
+  color: #8BB99A;
+  font-size: .48rem;
+  padding: 0.6rem 0 0 0;
+}
+.popup_container .popup_body {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  color: #9d9d9d;
+  font-size: .45rem;
+  line-height: 0.55rem;
+}
+.popup_container .popup_bottom {
+  text-align: center;
+  border-top: solid 0.04rem #8BB99A;
+  padding: 0 0.2rem;
+  font-size: .48rem;
+}
+.popup_container .popup_bottom .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  padding: 0.4rem 0;
+  border-left: solid 0.0267rem #8BB99A;
+  color: #8BB99A;
+}
+.popup_container .popup_bottom .btn:first-child {
+  border: none;
+}
