@@ -72,3 +72,63 @@ if (!Object.create) {
 //3.原型继承，关键：object.create
 //4.寄生式继承，关键：var clone=new Object(original);
 //5.混合继承，关键call+prototype
+
+//去掉小数部分
+Math.trunc = Math.trunc || function (x) {
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
+};
+//判断正负数
+Math.sign = Math.sign || function (x) {
+    x = +x; // convert to a number
+    if (x === 0 || isNaN(x)) {
+        return x;
+    }
+    return x > 0 ? 1 : -1;
+};
+//计算立方根
+Math.cbrt = Math.cbrt || function (x) {
+    var y = Math.pow(Math.abs(x), 1 / 3);
+    return x < 0 ? -y : y;
+};
+
+//尾递归优化方法
+function tco(f) {
+    var value;
+    var active = false;
+    var accumulated = [];
+
+    return function accumulator() {
+        accumulated.push(arguments);
+        if (!active) {
+            active = true;
+            while (accumulated.length) {
+                value = f.apply(this, accumulated.shift());
+            }
+            active = false;
+            return value;
+        }
+    };
+}
+
+//数组转化
+const toArray = (() =>
+    Array.from ? Array.from : obj => [].slice.call(obj)
+)();
+//数组转化2
+function ArrayOf() {
+    return [].slice.call(arguments);
+}
+//是否相等
+Object.defineProperty(Object, 'is', {
+    value: function (x, y) {
+        if (x === y) {
+            // 针对+0 不等于 -0的情况
+            return x !== 0 || 1 / x === 1 / y;
+        }
+        // 针对NaN的情况
+        return x !== x && y !== y;
+    },
+    configurable: true,
+    enumerable: false,
+    writable: true
+});
