@@ -14,7 +14,7 @@
 # 命令
 
 - gulp：启动http服务，监听文件改动
-- gulp build：重新生成对应的文件
+- gulp build：重新生成对应的文件,追加-o参数可以打包压缩版本的js
 - gulp clean：清除生成的文件
 - gulp server：单独启动http服务
 - gulp watch：监听文件改动
