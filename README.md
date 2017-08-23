@@ -23,6 +23,7 @@
 
 # 已添加的工具或者问题
 
+- js/scroll.ts :监听滚动条滚动事件并在移动到最底部的时候触发回调
 - js/flexible.js :移动端自适应插件。将屏幕格式化为统一的宽度。
 - base.less ：初始化页面并添加简单的浮动、文本居中、flex等class
 - border.less :
