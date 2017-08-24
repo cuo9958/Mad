@@ -4,7 +4,7 @@
  */
 class ScrollEvent {
     options = {
-        last: 0,//里最下面多少距离触发
+        last: 0,//离最下面多少距离触发
         fn: null,//触发之后的回调
     };
     //定时器
